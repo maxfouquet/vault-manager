@@ -1,0 +1,72 @@
+
+path "/secrets-hp/*" {
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "/secrets-production/*" {
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "/identity/*" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+
+path "/auth/approle/*" {
+  capabilities = [ "create", "read", "update", "delete", "list" ]
+}
+
+path "/auth/token/*" {
+   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "/auth/oidc/*" {
+   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "/sys/auth"{
+  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "/sys/auth/*"{
+  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "/sys/policy/acl" {
+	capabilities = ["read", "update"]
+}
+
+path "/sys/policy/acl/*" {
+	capabilities = ["read", "update"]
+}
+
+path "/sys/mounts" {
+  capabilities = [ "read" ]
+}
+
+path "/sys/mounts/*" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+
+path "/sys/namespaces" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+
+path "/sys/namespaces/*" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+
+path "/sys/capabilities" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+
+path "/sys/capabilities-self" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+
+path "/sys/policies" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+
+path "/sys/policies/*" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}

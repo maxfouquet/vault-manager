@@ -1,0 +1,78 @@
+#############################################################################
+# <ns>
+#############################################################################
+
+path "<ns>/sys/auth/*"{
+  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+path "<ns>/sys/auth"{
+  capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+path "<ns>/auth/approle/*" {
+  capabilities = [ "create", "read", "update", "delete", "list" ]
+}
+path "<ns>/sys/namespaces/*" {
+   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+path "<ns>/sys/policies/acl/*" {
+   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+path "<ns>/sys/policies/acl" {
+   capabilities = ["list"]
+}
+path "<ns>/sys/policy/*" {
+	capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+path "<ns>/sys/policy" {
+	capabilities = ["read", "update"]
+}
+path "<ns>/sys/mounts/*" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+path "<ns>/sys/mounts" {
+  capabilities = [ "read" ]
+}
+path "<ns>/identity/*" {
+   capabilities = ["create", "read", "update", "delete", "list"]
+}
+path "<ns>/auth/token/*" {
+   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+path "<ns>/secrets/*" {
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "<ns>/secrets-hp/user-kv/metadata" {
+  capabilities = ["list"]
+}
+path "<ns>/secrets-hp/*" {
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+path "<ns>/secrets-production/*" {
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "<ns>/secrets-production/user-kv/metadata" {
+  capabilities = ["list"]
+}
+path "<ns>/kv/*" {
+    capabilities = ["create", "read", "update", "delete", "list"]
+}
+path "<ns>/sys/capabilities" {
+  capabilities = ["create", "update"]
+}
+path "<ns>/sys/capabilities-self" {
+  capabilities = ["create", "update"]
+}
+
+path "<ns>/auth/oidc/role/*" {
+ capabilities = [ "create", "read", "update", "delete", "list", "sudo" ]
+}
+
+path "<ns>/auth/oidc/config" {
+ capabilities = [ "create", "read", "update", "delete", "list", "sudo" ]
+}
+
+path "<ns>/auth/oidc/*" {
+ capabilities = [ "create", "read", "update", "delete", "list", "sudo" ]
+}

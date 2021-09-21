@@ -1,0 +1,7 @@
+path "/secrets-recette/*" {
+    capabilities = ["read","list"]
+}
+
+path "/secrets-production/*" {
+    capabilities = ["read","list"]
+}

@@ -1,0 +1,7 @@
+path "/secrets-recette/*" {
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
+
+path "/secrets-production/*" {
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+}
